@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Práctica JavaScript</title>
+    <link rel="stylesheet" href="estilos.css">
+</head>
+<body>
+    <div id="container">
+        <header>
+            <h1>Práctica de JavaScript</h1>
+        </header>
+     <nav>
+        <ul>
+            <li><button onclick="mostrarSeccion('palindromo'); activarBoton(this)">Palíndromo</button></li>
+            <li><button onclick="mostrarSeccion('mayorque'); activarBoton(this)">Mayor entre dos números</button></li>
+            <li><button onclick="mostrarSeccion('extraer'); activarBoton(this)">Extraer vocales</button></li>
+            <li><button onclick="mostrarSeccion('contar'); activarBoton(this)">Contar vocales</button></li>
+            <li><button onclick="mostrarSeccion('ajax'); activarBoton(this)">AJAX</button></li>
+        </ul>
+     </nav> 
+    <div class="clear"></div>
+    </div>
+    <!-- Secciones -->
+    <div id="palindromo" class="seccion" >
+        <h2> Palíndromo </h2>
+        <input type="text" id="palinInput" placeholder="Ingrese una frase">
+        <button onclick="comprobarPalindromo()">Comprobar</button>
+        <div id="palinResultado"></div>
+    </div>
+
+    <div id="mayorque" class="seccion" style="display: none;"> 
+        <h2>Mayor entre dos números</h2>
+        <input type="number" id="num1" placeholder="Primer número">
+        <input type="number" id="num2" placeholder="Segundo número">
+        <button onclick="calcularMayor()">Calcular</button>
+        <div id="mayorResultado"></div>
+    </div>
+
+    <div id="extraer" class="seccion" style="display: none;"> 
+        <h2>Extraer vocales</h2>
+        <input type="text" id="extraerInput" placeholder="Ingrese una frase">
+        <button onclick="extraerVocales()">Extraer</button>
+        <div id="extraerResultado"></div>
+    </div>
+
+    <div id="contar" class="seccion" style="display:none;"> 
+        <h2> Contar vocales </h2>
+        <input type="text" id="contarInput" placeholder="Ingrese una frase">
+        <button onclick="contarVocales()">Contar</button>
+        <div id="contarResultado"></div>
+    </div>
+
+    <div id="ajax" class="seccion" style="display:none;">
+        <h2>Petición AJAX</h2>
+            <label>URL:</label>
+            <input type="text" id="ajaxUrl">
+            <button onclick="hacerPeticion()">Mostrar Contenido</button>
+        
+        <h3>Estado de la petición</h3>
+        <div id="ajaxEstado"></div>
+        
+        <h3>Código de estado</h3>
+        <div id="ajaxCodigo"></div>
+        
+        <h3>Cabeceras HTTP de la respuesta</h3>
+        <div id="ajaxCabeceras"></div>
+        
+        <h3>Contenido</h3>
+        <div id="ajaxContenido" style="white-space: pre-wrap;"></div>
+    </div>
+    <script src="script.js" defer></script>
+</body>
+</html>
